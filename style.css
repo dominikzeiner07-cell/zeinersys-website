@@ -60,6 +60,8 @@ a:hover {
   display: flex;
   gap: 1.5rem;
   font-size: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .main-nav a {
@@ -85,9 +87,14 @@ a:hover {
   gap: 3rem;
 }
 
+.hero-text {
+  flex: 1;
+  max-width: 560px;
+}
+
 .hero-text h1 {
-  font-size: 2.3rem;
-  line-height: 1.2;
+  font-size: 2.6rem;
+  line-height: 1.1;
   margin: 0 0 1rem;
   color: #111827;
 }
@@ -109,6 +116,78 @@ a:hover {
   font-size: 0.9rem;
   color: #6b7280;
   max-width: 32rem;
+}
+
+/* Hero: rechte Seite (Video-Karte) */
+.hero-media {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-video-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 1.5rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  padding: 1rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hero-video-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.hero-video-placeholder {
+  border-radius: 1.1rem;
+  background: radial-gradient(circle at top left, #e0f2fe, #f5f3ff 50%, #fee2e2);
+  padding: 1rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video-placeholder-inner {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0.9rem;
+  padding: 0.9rem 1rem;
+  max-width: 100%;
+}
+
+.hero-video-placeholder-inner p {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.hero-video-dot-row {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.hero-video-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background-color: #9ca3af;
+}
+
+.hero-video-caption {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
 
 /* Buttons */
@@ -144,60 +223,6 @@ a:hover {
 
 .btn-secondary:hover {
   background-color: #f3f4f6;
-}
-
-/* Hero-Mockup (Platzhalter rechte Seite) */
-.hero-visual {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-mockup {
-  width: 100%;
-  max-width: 360px;
-  border-radius: 1rem;
-  border: 1px solid #e5e7eb;
-  background: linear-gradient(145deg, #ffffff, #f3f4f6);
-  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
-  overflow: hidden;
-}
-
-.hero-mockup-header {
-  padding: 0.75rem 1rem;
-  background: #111827;
-  color: #f9fafb;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.hero-mockup-body {
-  padding: 1rem 1.1rem 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  background: #f9fafb;
-}
-
-.chat-bubble {
-  max-width: 100%;
-  padding: 0.55rem 0.8rem;
-  border-radius: 0.75rem;
-  font-size: 0.9rem;
-}
-
-.chat-bubble.user {
-  align-self: flex-start;
-  background-color: #e5e7eb;
-  color: #111827;
-  border-bottom-left-radius: 0.2rem;
-}
-
-.chat-bubble.bot {
-  align-self: flex-end;
-  background-color: #2563eb;
-  color: #ffffff;
-  border-bottom-right-radius: 0.2rem;
 }
 
 /* Allgemeine Sektionen */
@@ -243,7 +268,11 @@ a:hover {
   border: 1px solid #e5e7eb;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, border-color 0.12s ease-out, background-color 0.12s ease-out;
+  transition:
+    transform 0.12s ease-out,
+    box-shadow 0.12s ease-out,
+    border-color 0.12s ease-out,
+    background-color 0.12s ease-out;
 }
 
 .tile h3 {
@@ -333,22 +362,30 @@ a:hover {
 
 /* Responsiveness */
 @media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .main-nav {
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
   .hero-inner {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .hero-visual {
+  .hero-media {
     width: 100%;
     justify-content: flex-start;
   }
 
-  .hero-mockup {
+  .hero-video-card {
     max-width: 100%;
-  }
-
-  .main-nav {
-    display: none; /* später können wir ein mobiles Menü bauen, für den Anfang reicht: ausgeblendet */
   }
 }
 
@@ -358,7 +395,7 @@ a:hover {
   }
 
   .hero-text h1 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .site-footer {
