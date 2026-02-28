@@ -29,7 +29,7 @@ a:hover {
 
 /* Container für zentrierten Inhalt */
 .container {
-  max-width: 1120px;
+  max-width: 1280px;      /* vorher 1120px – mehr Breite nutzen */
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -56,8 +56,14 @@ a:hover {
   text-decoration: none;
 }
 
+/* Logo-Position: wenn du es später leicht nach links/rechts schieben willst,
+   kannst du hier z.B. margin-left: -8px; setzen. */
+.logo {
+  margin-left: 0;
+}
+
 .logo-image {
-  height: 44px;
+  height: 72px;
   display: block;
 }
 
