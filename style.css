@@ -29,7 +29,7 @@ a:hover {
 
 /* Container für zentrierten Inhalt */
 .container {
-  max-width: 1280px;      /* vorher 1120px – mehr Breite nutzen */
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -56,8 +56,7 @@ a:hover {
   text-decoration: none;
 }
 
-/* Logo-Position: wenn du es später leicht nach links/rechts schieben willst,
-   kannst du hier z.B. margin-left: -8px; setzen. */
+/* Logo-Position: hier kannst du bei Bedarf noch nachjustieren, z.B. margin-left: -8px; */
 .logo {
   margin-left: 0;
 }
@@ -84,7 +83,7 @@ a:hover {
   color: #111827;
 }
 
-/* Hero-Bereich */
+/* Hero-Bereich Startseite */
 .hero {
   background: radial-gradient(circle at top left, #e5f0ff 0%, #f9fafb 40%, #ffffff 100%);
   padding: 4rem 0 4.5rem;
@@ -201,6 +200,39 @@ a:hover {
   color: #6b7280;
 }
 
+/* Page-Hero für Unterseiten (z.B. Leistungen) */
+.page-hero {
+  background: radial-gradient(circle at top left, #e5f0ff 0%, #f9fafb 45%, #ffffff 100%);
+  border-bottom: 1px solid #e5e7eb;
+  padding: 3rem 0 3.2rem;
+}
+
+.page-hero-inner {
+  max-width: 100%;
+}
+
+.page-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  margin: 0 0 0.75rem;
+}
+
+.page-hero h1 {
+  margin: 0 0 0.9rem;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  color: #020617;
+}
+
+.page-hero-text {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -310,7 +342,77 @@ a:hover {
   background-color: #ffffff;
 }
 
-/* Vorteile / Benefits */
+/* Leistungen: Service-Grid */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.service-card {
+  position: relative;
+  padding: 1.5rem 1.4rem 1.6rem;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.04);
+}
+
+.service-card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.service-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.18rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  margin-bottom: 0.75rem;
+}
+
+/* Card-Soft (im Moment auf Leistungen nicht genutzt, aber ggf. später nützlich) */
+.card-soft {
+  margin-top: 2rem;
+  padding: 1.6rem 1.5rem 1.7rem;
+  background-color: #f9fafb;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.card-soft h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  color: #020617;
+}
+
+.card-soft p {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.card-soft-note {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Vorteile / Benefits (wird auf mehreren Seiten genutzt) */
 .benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -337,7 +439,7 @@ a:hover {
   color: #6b7280;
 }
 
-/* Zwei-Spalten-Layout (Datenschutz / Kontakt) */
+/* Zwei-Spalten-Layout (z.B. Schnell startklar / Mehr Inhalte) */
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -346,6 +448,80 @@ a:hover {
 
 .two-column p {
   color: #4b5563;
+}
+
+/* Info-Blocks (Leistungen: Schnell startklar & mehr Inhalte) */
+.fast-grid {
+  margin-top: 1.8rem;
+}
+
+.info-block {
+  padding: 1.6rem 1.5rem 1.7rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.03);
+}
+
+.info-block h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  color: #020617;
+}
+
+.info-block p {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.info-block-primary {
+  background: radial-gradient(circle at top left, #e0edff 0%, #ffffff 55%);
+  border-color: #bfdbfe;
+}
+
+.info-note {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Check-List (Häkchen-Liste) */
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.2rem 0 0;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.check-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0.04rem;
+  font-size: 0.8rem;
+  color: #16a34a;
+}
+
+/* CTA-Reihe (unten auf Leistungen) */
+.cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 /* Footer */
@@ -403,6 +579,15 @@ a:hover {
   .hero-video-card {
     max-width: 100%;
   }
+
+  .two-column {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 640px) {
@@ -414,8 +599,16 @@ a:hover {
     font-size: 2rem;
   }
 
+  .page-hero {
+    padding: 2.4rem 0 2.8rem;
+  }
+
+  .page-hero h1 {
+    font-size: 1.8rem;
+  }
+
   .logo-image {
-    height: 36px;   /* etwas kleiner auf Mobile */
+    height: 36px; /* etwas kleiner auf Mobile */
   }
 
   .site-footer {
