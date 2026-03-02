@@ -208,7 +208,8 @@ a:hover {
 }
 
 .page-hero-inner {
-  max-width: 100%;
+  max-width: 720px;   /* begrenzt die Breite wie beim normalen Text */
+  margin: 0;          /* bleibt linksbündig im Container */
 }
 
 .page-eyebrow {
