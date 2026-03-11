@@ -23,15 +23,53 @@
           />
         </a>
       </div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="angebote.html">Angebote</a>
-        <a href="funktionsweise.html">Funktionsweise</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="site-drawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Overlay -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Drawer / Seitenmenü -->
+  <aside class="site-drawer" id="site-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <p class="drawer-title">Menü</p>
+      <button class="drawer-close" type="button" aria-label="Menü schließen">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="angebote.html">Angebote</a>
+      <a href="funktionsweise.html">Funktionsweise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="drawer-divider"></div>
+
+    <nav class="drawer-nav drawer-nav-secondary">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+
+    <div class="drawer-cta">
+      <a href="kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
+    </div>
+  </aside>
 
   <main>
     <!-- Hero-Bereich: Text links, Video-Platzhalter rechts -->
@@ -57,10 +95,6 @@
           <div class="hero-video-card">
             <div class="hero-video-label">Vorschau-Widget</div>
             <div class="hero-video-placeholder">
-              <!--
-                Später kannst du diesen Platzhalter durch ein echtes Video ersetzen, z. B.:
-                <video src="assets/hero-widget.mp4" autoplay muted loop playsinline></video>
-              -->
               <div class="hero-video-placeholder-inner">
                 <div class="hero-video-dot-row">
                   <span class="hero-video-dot"></span>
@@ -169,7 +203,6 @@
           </p>
           <p>
             E-Mail: <a href="mailto:zeinersystems@office.at">zeinersystems@office.at</a><br />
-            <!-- Telefonnummer kannst du später ergänzen -->
           </p>
           <p>
             Oder nutzen Sie unser <a href="kontakt.html">Kontaktformular</a>.
@@ -190,10 +223,11 @@
         <a href="datenschutz.html">Datenschutz</a>
       </div>
     </div>
-    <script>
-      // Aktuelles Jahr im Footer
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

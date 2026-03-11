@@ -12,9 +12,10 @@ html {
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #0f172a; /* sehr dunkles Blau-Grau */
+  color: #0f172a;
   background-color: #ffffff;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 /* Links allgemein */
@@ -40,7 +41,7 @@ a:hover {
   border-bottom: 1px solid #e5e7eb;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 40;
 }
 
 .header-inner {
@@ -56,7 +57,6 @@ a:hover {
   text-decoration: none;
 }
 
-/* Logo-Position: hier kannst du bei Bedarf noch nachjustieren, z.B. margin-left: -8px; */
 .logo {
   margin-left: 0;
 }
@@ -66,21 +66,162 @@ a:hover {
   display: block;
 }
 
-.main-nav {
+/* Hamburger Button */
+.menu-toggle {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 1px solid #dbeafe;
+  background: #ffffff;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.28rem;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.14s ease-out,
+    box-shadow 0.14s ease-out,
+    border-color 0.14s ease-out,
+    background-color 0.14s ease-out;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-1px);
+  border-color: #93c5fd;
+  background-color: #f8fbff;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.menu-toggle span {
+  width: 22px;
+  height: 2px;
+  border-radius: 999px;
+  background-color: #0f172a;
+  display: block;
+}
+
+/* Drawer */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.42);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-out, visibility 0.2s ease-out;
+  z-index: 45;
+}
+
+.site-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(220px, 92vw);
+  height: 100vh;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  box-shadow: -18px 0 40px rgba(15, 23, 42, 0.12);
+  padding: 1.1rem 1.2rem 1.4rem;
+  transform: translateX(100%);
+  transition: transform 0.24s ease-out;
+  z-index: 50;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+}
+
+body.drawer-open .drawer-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.drawer-open .site-drawer {
+  transform: translateX(0);
+}
+
+body.drawer-open {
+  overflow: hidden;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.drawer-title {
+  margin: 0;
   font-size: 0.95rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  font-weight: 600;
+  color: #0f172a;
 }
 
-.main-nav a {
-  color: #4b5563;
+.drawer-close {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+
+.drawer-close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: #0f172a;
+  border-radius: 999px;
+}
+
+.drawer-close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.drawer-close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.drawer-nav a {
+  display: block;
+  padding: 0.85rem 0.95rem;
+  border-radius: 0.9rem;
+  color: #0f172a;
   font-weight: 500;
+  text-decoration: none;
+  background: #ffffff;
+  transition: background-color 0.14s ease-out, color 0.14s ease-out;
 }
 
-.main-nav a:hover {
-  color: #111827;
+.drawer-nav a:hover {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.drawer-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 1rem 0;
+}
+
+.drawer-nav-secondary a {
+  color: #475569;
+}
+
+.drawer-cta {
+  margin-top: auto;
+  padding-top: 1.2rem;
 }
 
 /* Hero-Bereich Startseite */
@@ -200,7 +341,7 @@ a:hover {
   color: #6b7280;
 }
 
-/* Page-Hero für Unterseiten (z.B. Leistungen) */
+/* Page-Hero für Unterseiten */
 .page-hero {
   background: radial-gradient(circle at top left, #e5f0ff 0%, #f9fafb 45%, #ffffff 100%);
   border-bottom: 1px solid #e5e7eb;
@@ -208,8 +349,8 @@ a:hover {
 }
 
 .page-hero-inner {
-  max-width: 720px;   /* begrenzt die Breite wie beim normalen Text */
-  margin: 0;          /* bleibt linksbündig im Container */
+  max-width: 32rem;
+  margin: 0;
 }
 
 .page-eyebrow {
@@ -257,6 +398,7 @@ a:hover {
 .btn-primary:hover {
   background: linear-gradient(135deg, #1d4ed8, #1e40af);
   border-color: #1d4ed8;
+  text-decoration: none;
 }
 
 .btn-secondary {
@@ -267,6 +409,7 @@ a:hover {
 
 .btn-secondary:hover {
   background-color: #f3f4f6;
+  text-decoration: none;
 }
 
 /* Allgemeine Sektionen */
@@ -312,22 +455,22 @@ a:hover {
 .tile {
   display: block;
   padding: 1.4rem 1.4rem 1.5rem;
-  background-color: #f9fafb;
   border-radius: 1rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #dbeafe;
+  background: linear-gradient(135deg, #e0edff 0%, #f9fafb 50%, #ffffff 100%);
   text-decoration: none;
   color: inherit;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
   transition:
-    transform 0.12s ease-out,
-    box-shadow 0.12s ease-out,
-    border-color 0.12s ease-out,
-    background-color 0.12s ease-out;
+    transform 0.14s ease-out,
+    box-shadow 0.14s ease-out,
+    border-color 0.14s ease-out;
 }
 
 .tile h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
-  color: #111827;
+  color: #0f172a;
 }
 
 .tile p {
@@ -337,10 +480,11 @@ a:hover {
 }
 
 .tile:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.06);
-  border-color: #bfdbfe;
-  background-color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+  border-color: #2563eb;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #ffffff 100%);
+  text-decoration: none;
 }
 
 /* Leistungen: Service-Grid */
@@ -387,7 +531,7 @@ a:hover {
   margin-bottom: 0.75rem;
 }
 
-/* Card-Soft (im Moment auf Leistungen nicht genutzt, aber ggf. später nützlich) */
+/* Card-Soft */
 .card-soft {
   margin-top: 2rem;
   padding: 1.6rem 1.5rem 1.7rem;
@@ -413,7 +557,7 @@ a:hover {
   color: #6b7280;
 }
 
-/* Vorteile / Benefits (wird auf mehreren Seiten genutzt) */
+/* Vorteile / Benefits */
 .benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -440,7 +584,77 @@ a:hover {
   color: #6b7280;
 }
 
-/* Zwei-Spalten-Layout (z.B. Schnell startklar / Mehr Inhalte) */
+/* Pricing (Angebote) */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.pricing-card {
+  position: relative;
+  padding: 1.8rem 1.6rem 1.9rem;
+  background-color: #ffffff;
+  border-radius: 1.2rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    border-color 0.16s ease-out,
+    background-color 0.16s ease-out;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+  border-color: #bfdbfe;
+  background: radial-gradient(circle at top left, #eff6ff 0%, #ffffff 55%);
+}
+
+.pricing-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #020617;
+  margin: 0 0 0.2rem;
+}
+
+.pricing-price {
+  margin: 0.1rem 0 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #020617;
+}
+
+.pricing-tagline {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #dcfce7;
+  color: #166534;
+  margin-bottom: 0.8rem;
+}
+
+.pricing-card-pro {
+  border-color: #bfdbfe;
+}
+
+.pricing-card-pro .pricing-badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* Zwei-Spalten-Layout */
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -451,17 +665,17 @@ a:hover {
   color: #4b5563;
 }
 
-/* Info-Blocks (Leistungen: Schnell startklar & mehr Inhalte) */
+/* Info-Blocks */
 .fast-grid {
   margin-top: 1.8rem;
 }
 
 .info-block {
   padding: 1.6rem 1.5rem 1.7rem;
-  background-color: #ffffff;
   border-radius: 1rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.03);
+  border: 1px solid #dbeafe;
+  background: radial-gradient(circle at top left, #e0edff 0%, #f9fafb 45%, #ffffff 100%);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
 }
 
 .info-block h3 {
@@ -477,8 +691,8 @@ a:hover {
 }
 
 .info-block-primary {
-  background: radial-gradient(circle at top left, #e0edff 0%, #ffffff 55%);
   border-color: #bfdbfe;
+  background: radial-gradient(circle at top left, #dbeafe 0%, #eff6ff 45%, #ffffff 100%);
 }
 
 .info-note {
@@ -487,7 +701,7 @@ a:hover {
   color: #6b7280;
 }
 
-/* Check-List (Häkchen-Liste) */
+/* Check-List */
 .check-list {
   list-style: none;
   padding: 0;
@@ -511,7 +725,7 @@ a:hover {
   color: #16a34a;
 }
 
-/* CTA-Reihe (unten auf Leistungen) */
+/* CTA-Reihe */
 .cta-row {
   display: flex;
   align-items: center;
@@ -555,16 +769,8 @@ a:hover {
 
 /* Responsiveness */
 @media (max-width: 900px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .main-nav {
-    justify-content: flex-start;
-    gap: 1rem;
-    font-size: 0.9rem;
+  .logo-image {
+    height: 54px;
   }
 
   .hero-inner {
@@ -609,7 +815,12 @@ a:hover {
   }
 
   .logo-image {
-    height: 36px; /* etwas kleiner auf Mobile */
+    height: 42px;
+  }
+
+  .menu-toggle {
+    width: 48px;
+    height: 48px;
   }
 
   .site-footer {
