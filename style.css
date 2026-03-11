@@ -28,14 +28,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Container für zentrierten Inhalt */
+/* Container */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* Header / Navigation */
+/* Header */
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -66,7 +66,7 @@ a:hover {
   display: block;
 }
 
-/* Hamburger Button */
+/* Hamburger */
 .menu-toggle {
   width: 52px;
   height: 52px;
@@ -224,10 +224,10 @@ body.drawer-open {
   padding-top: 1.2rem;
 }
 
-/* Hero-Bereich Startseite */
+/* Hero */
 .hero {
-  background: radial-gradient(circle at top left, #e5f0ff 0%, #f9fafb 40%, #ffffff 100%);
-  padding: 4rem 0 4.5rem;
+  background: radial-gradient(circle at top left, #dbeafe 0%, #eff6ff 34%, #ffffff 100%);
+  padding: 3.6rem 0 4rem;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -243,33 +243,60 @@ body.drawer-open {
   max-width: 560px;
 }
 
+.hero-eyebrow {
+  margin: 0 0 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
 .hero-text h1 {
-  font-size: 2.6rem;
-  line-height: 1.1;
+  font-size: 2.7rem;
+  line-height: 1.08;
   margin: 0 0 1rem;
   color: #020617;
 }
 
-.hero-text p {
+.hero-lead {
   margin: 0 0 1.2rem;
-  font-size: 1rem;
-  color: #4b5563;
+  font-size: 1.02rem;
+  color: #475569;
+  max-width: 34rem;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
-.hero-note {
-  font-size: 0.9rem;
-  color: #6b7280;
-  max-width: 32rem;
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
-/* Hero: rechte Seite (Video-Karte) */
+.hero-badges-top {
+  margin-top: 0.25rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.82rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  color: #334155;
+  font-size: 0.86rem;
+  font-weight: 500;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+/* Hero rechts */
 .hero-media {
   flex: 1;
   display: flex;
@@ -280,7 +307,7 @@ body.drawer-open {
   width: 100%;
   max-width: 400px;
   border-radius: 1.5rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #dbeafe;
   background: #ffffff;
   box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
   padding: 1rem 1.2rem 1.3rem;
@@ -302,7 +329,7 @@ body.drawer-open {
 
 .hero-video-placeholder {
   border-radius: 1.1rem;
-  background: radial-gradient(circle at top left, #1d4ed8, #38bdf8 40%, #eef2ff 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #38bdf8 55%, #e0f2fe 100%);
   padding: 1rem;
   min-height: 200px;
   display: flex;
@@ -311,7 +338,7 @@ body.drawer-open {
 }
 
 .hero-video-placeholder-inner {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.92);
   border-radius: 0.9rem;
   padding: 0.9rem 1rem;
   max-width: 100%;
@@ -341,7 +368,7 @@ body.drawer-open {
   color: #6b7280;
 }
 
-/* Page-Hero für Unterseiten */
+/* Unterseiten */
 .page-hero {
   background: radial-gradient(circle at top left, #e5f0ff 0%, #f9fafb 45%, #ffffff 100%);
   border-bottom: 1px solid #e5e7eb;
@@ -412,9 +439,9 @@ body.drawer-open {
   text-decoration: none;
 }
 
-/* Allgemeine Sektionen */
+/* Sektionen */
 .section {
-  padding: 3.5rem 0;
+  padding: 3.2rem 0;
 }
 
 .section-alt {
@@ -424,7 +451,7 @@ body.drawer-open {
 }
 
 .section-soft {
-  background-color: #f5f7fb;
+  background-color: #f8fbff;
   border-top: 1px solid #e5e7eb;
 }
 
@@ -435,12 +462,12 @@ body.drawer-open {
 }
 
 .section-intro {
-  margin: 0 0 1.8rem;
+  margin: 0 0 1.6rem;
   color: #6b7280;
   max-width: 32rem;
 }
 
-/* Kachel-Grid (Übersicht auf Home) */
+/* Home Tiles */
 .section-tiles {
   background-color: #ffffff;
   border-bottom: 1px solid #e5e7eb;
@@ -449,45 +476,58 @@ body.drawer-open {
 .tile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
+  gap: 1.2rem;
+}
+
+.tile-grid-strong {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .tile {
   display: block;
-  padding: 1.4rem 1.4rem 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid #dbeafe;
-  background: linear-gradient(135deg, #e0edff 0%, #f9fafb 50%, #ffffff 100%);
+  padding: 1.35rem 1.25rem 1.4rem;
+  border-radius: 1.1rem;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
   transition:
-    transform 0.14s ease-out,
-    box-shadow 0.14s ease-out,
-    border-color 0.14s ease-out;
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    border-color 0.16s ease-out;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.1);
+  text-decoration: none;
 }
 
 .tile h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+  margin: 0 0 0.45rem;
+  font-size: 1.08rem;
   color: #0f172a;
 }
 
 .tile p {
   margin: 0;
   font-size: 0.95rem;
-  color: #6b7280;
+  color: #475569;
 }
 
-.tile:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
-  border-color: #2563eb;
-  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 50%, #ffffff 100%);
-  text-decoration: none;
+.tile-strong {
+  border: 1px solid transparent;
 }
 
-/* Leistungen: Service-Grid */
+.tile-blue,
+.tile-indigo,
+.tile-cyan,
+.tile-slate,
+.tile-sky {
+  background: linear-gradient(135deg, #e8f1ff 0%, #f4f8ff 55%, #ffffff 100%);
+  border-color: #bfd8ff;
+}
+
+/* Leistungen */
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -557,34 +597,39 @@ body.drawer-open {
   color: #6b7280;
 }
 
-/* Vorteile / Benefits */
+/* Benefits */
 .benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.8rem;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.benefits-compact .benefit {
+  padding: 1.2rem 1.2rem 1.25rem;
 }
 
 .benefit {
   padding: 1.4rem 1.4rem 1.5rem;
-  background-color: #ffffff;
+  background: #ffffff;
   border-radius: 1rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
 }
 
 .benefit h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.05rem;
+  margin: 0 0 0.45rem;
+  font-size: 1.03rem;
   color: #111827;
 }
 
 .benefit p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   color: #6b7280;
 }
 
-/* Pricing (Angebote) */
+/* Pricing */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -654,7 +699,7 @@ body.drawer-open {
   color: #1d4ed8;
 }
 
-/* Zwei-Spalten-Layout */
+/* Layouts */
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -665,7 +710,6 @@ body.drawer-open {
   color: #4b5563;
 }
 
-/* Info-Blocks */
 .fast-grid {
   margin-top: 1.8rem;
 }
@@ -725,7 +769,19 @@ body.drawer-open {
   color: #16a34a;
 }
 
-/* CTA-Reihe */
+/* Home CTA */
+.home-cta-section {
+  border-top: 1px solid #e5e7eb;
+}
+
+.home-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* CTA allgemein */
 .cta-row {
   display: flex;
   align-items: center;
@@ -767,7 +823,7 @@ body.drawer-open {
   color: #ffffff;
 }
 
-/* Responsiveness */
+/* Responsive */
 @media (max-width: 900px) {
   .logo-image {
     height: 54px;
@@ -787,11 +843,10 @@ body.drawer-open {
     max-width: 100%;
   }
 
-  .two-column {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
+  .two-column,
+  .home-cta,
   .cta-row {
+    grid-template-columns: minmax(0, 1fr);
     flex-direction: column;
     align-items: flex-start;
   }
@@ -803,7 +858,7 @@ body.drawer-open {
   }
 
   .hero-text h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
 
   .page-hero {
@@ -821,6 +876,14 @@ body.drawer-open {
   .menu-toggle {
     width: 48px;
     height: 48px;
+  }
+
+  .hero-badges {
+    gap: 0.5rem;
+  }
+
+  .hero-badge {
+    font-size: 0.82rem;
   }
 
   .site-footer {
