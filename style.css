@@ -480,25 +480,26 @@ body.drawer-open {
 }
 
 .tile-grid-strong {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
 }
-
 .tile {
   display: block;
-  padding: 1.35rem 1.25rem 1.4rem;
-  border-radius: 1.1rem;
+  padding: 1.45rem 1.3rem 1.35rem;
+  border-radius: 1.2rem;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.07);
   transition:
-    transform 0.16s ease-out,
-    box-shadow 0.16s ease-out,
-    border-color 0.16s ease-out;
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out,
+    background 0.18s ease-out;
 }
 
 .tile:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 22px 42px rgba(15, 23, 42, 0.12);
   text-decoration: none;
 }
 
@@ -510,12 +511,14 @@ body.drawer-open {
 
 .tile p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   color: #475569;
+  max-width: 19rem;
 }
 
 .tile-strong {
   border: 1px solid transparent;
+  min-height: 205px;
 }
 
 .tile-blue,
@@ -523,8 +526,42 @@ body.drawer-open {
 .tile-cyan,
 .tile-slate,
 .tile-sky {
-  background: linear-gradient(135deg, #e8f1ff 0%, #f4f8ff 55%, #ffffff 100%);
-  border-color: #bfd8ff;
+  background: linear-gradient(145deg, #edf4ff 0%, #f7faff 58%, #ffffff 100%);
+  border-color: #cfe0ff;
+}
+
+.tile-blue:hover,
+.tile-indigo:hover,
+.tile-cyan:hover,
+.tile-slate:hover,
+.tile-sky:hover {
+  background: linear-gradient(145deg, #e1edff 0%, #f2f7ff 58%, #ffffff 100%);
+  border-color: #9ec5ff;
+}
+
+
+.tile-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+
+.tile-link::after {
+  content: "→";
+  margin-left: 0.4rem;
+  transition: transform 0.16s ease-out;
+}
+
+.tile:hover .tile-link::after {
+  transform: translateX(3px);
+}
+
+.tile:hover .tile-icon {
+  border-color: #60a5fa;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.14);
 }
 
 /* Leistungen */
@@ -597,36 +634,110 @@ body.drawer-open {
   color: #6b7280;
 }
 
-/* Benefits */
-.benefits {
+/* Benefits Accordion */
+.benefit-accordion {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.2rem;
   margin-top: 1.5rem;
 }
 
-.benefits-compact .benefit {
+.benefit-item {
+  width: 100%;
+  text-align: left;
   padding: 1.2rem 1.2rem 1.25rem;
-}
-
-.benefit {
-  padding: 1.4rem 1.4rem 1.5rem;
-  background: #ffffff;
-  border-radius: 1rem;
+  background: linear-gradient(145deg, #f8fbff 0%, #ffffff 100%);
   border: 1px solid #dbeafe;
+  border-radius: 1rem;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  cursor: pointer;
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    border-color 0.16s ease-out,
+    background 0.16s ease-out;
 }
 
-.benefit h3 {
-  margin: 0 0 0.45rem;
+.benefit-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* einzelne Farbakzente pro Karte */
+.benefit-item {
+  width: 100%;
+  text-align: left;
+  padding: 1.2rem 1.2rem 1.25rem;
+  background: linear-gradient(145deg, #eef4ff 0%, #ffffff 100%);
+  border: 1px solid #cfe0ff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+  cursor: pointer;
+  transition:
+    transform 0.16s ease-out,
+    box-shadow 0.16s ease-out,
+    border-color 0.16s ease-out,
+    background 0.16s ease-out;
+}
+
+.benefit-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+  border-color: #93c5fd;
+  background: linear-gradient(145deg, #e3eeff 0%, #ffffff 100%);
+}
+
+.benefit-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.55rem;
+}
+
+.benefit-item-title {
   font-size: 1.03rem;
+  font-weight: 700;
   color: #111827;
 }
 
-.benefit p {
-  margin: 0;
+.benefit-item-toggle {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #2563eb;
+  white-space: nowrap;
+}
+
+.benefit-item-preview {
+  display: block;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.benefit-item-content {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
   font-size: 0.94rem;
-  color: #6b7280;
+  color: #64748b;
+  line-height: 1.6;
+  transition:
+    max-height 0.24s ease,
+    opacity 0.2s ease,
+    margin-top 0.2s ease;
+}
+
+.benefit-item.is-open .benefit-item-content {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 0.8rem;
+}
+
+.benefit-item.is-open .benefit-item-toggle {
+  color: #1d4ed8;
 }
 
 /* Pricing */
@@ -842,6 +953,14 @@ body.drawer-open {
   .hero-video-card {
     max-width: 100%;
   }
+
+  .tile-grid-strong {
+  grid-template-columns: 1fr;
+}
+
+.benefit-accordion {
+  grid-template-columns: 1fr;
+}
 
   .two-column,
   .home-cta,

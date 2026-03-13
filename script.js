@@ -34,3 +34,16 @@ if (menuToggle && drawer && backdrop && closeButton) {
     }
   });
 }
+
+document.querySelectorAll(".benefit-item").forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("is-open");
+
+    const toggle = item.querySelector(".benefit-item-toggle");
+    if (!toggle) return;
+
+    toggle.textContent = item.classList.contains("is-open")
+      ? "Weniger anzeigen"
+      : "Mehr anzeigen";
+  });
+});
