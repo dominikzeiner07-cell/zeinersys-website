@@ -23,15 +23,53 @@
           />
         </a>
       </div>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="leistungen.html">Leistungen</a>
-        <a href="angebote.html">Angebote</a>
-        <a href="funktionsweise.html">Funktionsweise</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="site-drawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Overlay -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Drawer / Seitenmenü -->
+  <aside class="site-drawer" id="site-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <p class="drawer-title">Menü</p>
+      <button class="drawer-close" type="button" aria-label="Menü schließen">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen & Ablauf</a>
+      <a href="angebote.html">Angebote</a>
+      <a href="funktionsweise.html">Funktionsweise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="drawer-divider"></div>
+
+    <nav class="drawer-nav drawer-nav-secondary">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+
+    <div class="drawer-cta">
+      <a href="kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
+    </div>
+  </aside>
 
   <main>
     <!-- Page-Hero: kurzer Überblick -->
@@ -53,21 +91,19 @@
       <div class="container">
         <h2>Unsere Pakete im Überblick</h2>
         <p class="section-intro">
-          Beide Pakete beinhalten einen vollständig eingerichteten Website-Chatbot.
-          Der Unterschied liegt hauptsächlich im Umfang der Inhalte und im Modell.
-        </p>
-
+         text maybe
         <div class="pricing-grid">
           <!-- Standard-Plan -->
           <article class="pricing-card">
-            <div class="pricing-label">Standard</div>
-            <p class="pricing-price">29&nbsp;€ / Monat</p>
-            <p class="pricing-tagline">
-              Für kleinere Websites und Betriebe mit überschaubarem Informationsumfang.
-            </p>
-            <p class="pricing-badge">
-              Einrichtung &amp; erster Monat kostenlos
-            </p>
+           <div class="pricing-label">Standard</div>
+<p class="pricing-highlight">Erster Monat gratis</p>
+<p class="pricing-after">danach 29&nbsp;€ / Monat</p>
+<p class="pricing-tagline">
+  Für kleinere Websites und Betriebe mit überschaubarem Informationsumfang.
+</p>
+<p class="pricing-badge">
+  Einrichtung inklusive
+</p>
 <ul class="check-list">
   <li>1 Website-Chatbot, eingebunden per Widget</li>
   <li>Geeignet für kleinere Websites &amp; FAQs</li>
@@ -80,14 +116,15 @@
 
           <!-- Pro-Plan -->
           <article class="pricing-card pricing-card-pro">
-            <div class="pricing-label">Pro</div>
-            <p class="pricing-price">49&nbsp;€ / Monat</p>
-            <p class="pricing-tagline">
-              Für Unternehmen mit mehr Inhalten oder höheren Besucherzahlen.
-            </p>
-            <p class="pricing-badge">
-              Einrichtung &amp; erster Monat kostenlos
-            </p>
+          <div class="pricing-label">Pro</div>
+<p class="pricing-highlight">Erster Monat gratis</p>
+<p class="pricing-after">danach 49&nbsp;€ / Monat</p>
+<p class="pricing-tagline">
+  Für Unternehmen mit mehr Inhalten oder höheren Besucherzahlen.
+</p>
+<p class="pricing-badge">
+  Einrichtung inklusive
+</p>
 <ul class="check-list">
   <li>1 Website-Chatbot, eingebunden per Widget</li>
   <li>Inhalte: ca. bis zu 100 Seiten / Dokumente</li>
@@ -100,18 +137,20 @@
         </div>
 
         <!-- Hinweis auf aktuelle Aktion (zusätzlich, etwas ausführlicher) -->
-        <div class="card-soft">
-          <h3>Aktuell: Einrichtung &amp; erster Monat kostenlos</h3>
-          <p>
-            Für die ersten Kundinnen und Kunden übernehmen wir die Einrichtung des Chatbots
-            sowie den ersten Monat im gewählten Paket ohne Zusatzkosten. So können Sie in Ruhe
-            ausprobieren, wie der Chatbot im Alltag unterstützt.
-          </p>
-          <p class="card-soft-note">
-            Das Angebot ist zeitlich begrenzt und gilt nur für neue Projekte.
-            Details besprechen wir im persönlichen Gespräch.
-          </p>
-        </div>
+        <div class="card-soft promo-card">
+  <div class="promo-corner-badge">Nur für kurze Zeit</div>
+
+  <h3>Aktuell: Einrichtung &amp; erster Monat kostenlos</h3>
+  <p>
+    Für die ersten Kundinnen und Kunden übernehmen wir die Einrichtung des Chatbots
+    sowie den ersten Monat im gewählten Paket ohne Zusatzkosten. So können Sie in Ruhe
+    ausprobieren, wie der Chatbot im Alltag unterstützt.
+  </p>
+  <p class="card-soft-note">
+    Das Angebot ist zeitlich begrenzt und gilt nur für neue Projekte.
+    Details besprechen wir im persönlichen Gespräch.
+  </p>
+</div>
       </div>
     </section>
 
@@ -149,9 +188,11 @@
         <a href="datenschutz.html">Datenschutz</a>
       </div>
     </div>
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

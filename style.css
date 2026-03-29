@@ -62,7 +62,7 @@ a:hover {
 }
 
 .logo-image {
-  height: 72px;
+  height: 66px;
   display: block;
 }
 
@@ -245,7 +245,7 @@ body.drawer-open {
 
 .hero-eyebrow {
   margin: 0 0 0.8rem;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -383,9 +383,9 @@ body.drawer-open {
 .page-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: #64748b;
+  color: #2563eb;
   margin: 0 0 0.75rem;
 }
 
@@ -572,6 +572,29 @@ body.drawer-open {
   margin-top: 1.8rem;
 }
 
+.steps-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  max-width: 1120px;
+  gap: 1.35rem;
+}
+
+.steps-grid .step-card {
+  grid-column: span 2;
+  min-height: 0;
+}
+
+.steps-grid .step-card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.steps-grid .step-card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.step-card p {
+  max-width: 30rem;
+}
+
 .service-card {
   position: relative;
   padding: 1.5rem 1.4rem 1.6rem;
@@ -632,6 +655,34 @@ body.drawer-open {
 .card-soft-note {
   font-size: 0.9rem;
   color: #6b7280;
+}
+
+.promo-card {
+  position: relative;
+  border-color: #f3d6d6;
+  background: linear-gradient(145deg, #fffafa 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.promo-card h3 {
+  color: #111827;
+}
+
+.promo-card .card-soft-note {
+  color: #7f1d1d;
+}
+
+.promo-corner-badge {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.55rem 0.95rem;
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-top-left-radius: 1rem;
+  box-shadow: 0 -6px 18px rgba(220, 38, 38, 0.18);
 }
 
 /* Benefits Accordion */
@@ -770,10 +821,26 @@ body.drawer-open {
 }
 
 .pricing-label {
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #020617;
   margin: 0 0 0.2rem;
+}
+
+.pricing-highlight {
+  margin: 0 0 0.16rem;
+  font-size: 1.5rem;
+  line-height: 1.08;
+  font-weight: 750;
+  color: #b91c1c;
+  letter-spacing: -0.01em;
+}
+
+.pricing-after {
+  margin: 0 0 0.95rem;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #475569;
 }
 
 .pricing-price {
@@ -792,15 +859,15 @@ body.drawer-open {
 .pricing-badge {
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem 0.7rem;
+  padding: 0.24rem 0.72rem;
   border-radius: 999px;
   font-size: 0.8rem;
-  font-weight: 500;
-  background: #dcfce7;
-  color: #166534;
-  margin-bottom: 0.8rem;
+  font-weight: 600;
+  background: #eff6ff;
+  color: #1d4ed8;
+  margin-bottom: 0.85rem;
+  border: 1px solid #dbeafe;
 }
-
 .pricing-card-pro {
   border-color: #bfdbfe;
 }
@@ -962,6 +1029,17 @@ body.drawer-open {
   grid-template-columns: 1fr;
 }
 
+.steps-grid {
+  grid-template-columns: 1fr;
+  max-width: 100%;
+}
+
+.steps-grid .step-card,
+.steps-grid .step-card:nth-child(4),
+.steps-grid .step-card:nth-child(5) {
+  grid-column: auto;
+}
+
   .two-column,
   .home-cta,
   .cta-row {
@@ -975,6 +1053,10 @@ body.drawer-open {
   .hero {
     padding: 3rem 0 3.2rem;
   }
+
+.pricing-highlight {
+  font-size: 1.32rem;
+}
 
   .hero-text h1 {
     font-size: 2.1rem;
