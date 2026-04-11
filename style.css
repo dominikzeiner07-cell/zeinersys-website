@@ -829,10 +829,10 @@ body.drawer-open {
 
 .pricing-highlight {
   margin: 0 0 0.16rem;
-  font-size: 1.5rem;
+  font-size: 1.34rem;
   line-height: 1.08;
-  font-weight: 750;
-  color: #b91c1c;
+  font-weight: 700;
+  color: #c2410c;
   letter-spacing: -0.01em;
 }
 
@@ -1055,7 +1055,7 @@ body.drawer-open {
   }
 
 .pricing-highlight {
-  font-size: 1.32rem;
+  font-size: 1.16rem;
 }
 
   .hero-text h1 {
