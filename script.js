@@ -3,6 +3,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const drawer = document.getElementById("site-drawer");
 const backdrop = document.getElementById("drawer-backdrop");
 const closeButton = document.querySelector(".drawer-close");
+const siteHeader = document.querySelector(".site-header");
 
 function openDrawer() {
   body.classList.add("drawer-open");
@@ -35,15 +36,31 @@ if (menuToggle && drawer && backdrop && closeButton) {
   });
 }
 
-document.querySelectorAll(".benefit-item").forEach((item) => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("is-open");
+if (siteHeader) {
+  let lastScrollY = window.scrollY;
+  const scrollThreshold = 8;
 
-    const toggle = item.querySelector(".benefit-item-toggle");
-    if (!toggle) return;
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
 
-    toggle.textContent = item.classList.contains("is-open")
-      ? "Weniger anzeigen"
-      : "Mehr anzeigen";
-  });
-});
+    if (body.classList.contains("drawer-open")) {
+      siteHeader.classList.remove("header-hidden");
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    if (currentScrollY <= 10) {
+      siteHeader.classList.remove("header-hidden");
+      lastScrollY = currentScrollY;
+      return;
+    }
+
+    if (currentScrollY > lastScrollY + scrollThreshold) {
+      siteHeader.classList.add("header-hidden");
+    } else if (currentScrollY < lastScrollY - scrollThreshold) {
+      siteHeader.classList.remove("header-hidden");
+    }
+
+    lastScrollY = currentScrollY;
+  }, { passive: true });
+}

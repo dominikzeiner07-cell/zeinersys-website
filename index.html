@@ -12,31 +12,38 @@
 </head>
 <body>
   <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="assets/logo-zeiner-systems.png"
-            alt="Zeiner Systems Logo"
-            class="logo-image"
-          />
-        </a>
-      </div>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Menü öffnen"
-        aria-expanded="false"
-        aria-controls="site-drawer"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="index.html">
+        <img
+          src="assets/logo-zeiner-systems.png"
+          alt="Zeiner Systems Logo"
+          class="logo-image"
+        />
+      </a>
     </div>
-  </header>
+
+    <nav class="header-nav" aria-label="Hauptnavigation">
+      <a href="leistungen.html">Leistungen &amp; Ablauf</a>
+      <a href="angebote.html">Angebote</a>
+      <a href="funktionsweise.html">Funktionsweise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="site-drawer"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
   <!-- Overlay -->
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
@@ -53,7 +60,7 @@
 
     <nav class="drawer-nav">
       <a href="index.html">Home</a>
-      <a href="leistungen.html">Leistungen & Ablauf</a>
+      <a href="leistungen.html">Leistungen &amp; Ablauf</a>
       <a href="angebote.html">Angebote</a>
       <a href="funktionsweise.html">Funktionsweise</a>
       <a href="kontakt.html">Kontakt</a>
@@ -77,10 +84,15 @@
       <div class="container hero-inner">
         <div class="hero-text">
           <p class="hero-eyebrow">KI-Chatbots für Unternehmen</p>
-          <h1>Klare Antworten auf Ihrer Website – automatisch und professionell.</h1>
+          <h1>Ein Chatbot, der Ihre Website klarer und hilfreicher macht.</h1>
           <p class="hero-lead">
-            Wir richten Ihren Website-Chatbot für Sie ein – auf Basis Ihrer Website und Ihrer wichtigsten Inhalte.
+            Schnelle Antworten für Besucher. Weniger wiederkehrende Anfragen für Ihr Team.
           </p>
+
+          <div class="hero-actions">
+            <a href="kontakt.html" class="btn btn-primary">Unverbindlich anfragen</a>
+            <a href="angebote.html" class="btn btn-secondary">Pakete ansehen</a>
+          </div>
         </div>
 
         <div class="hero-media">
@@ -93,116 +105,124 @@
                   <span class="hero-video-dot"></span>
                   <span class="hero-video-dot"></span>
                 </div>
-                <p>Hier wird später ein kurzer Loop des Chatbot-Widgets angezeigt.</p>
+                <p>Hier kann später ein kurzer animierter Widget-Loop eingebunden werden.</p>
               </div>
             </div>
             <p class="hero-video-caption">
-              Öffnen, Frage stellen, Antwort erhalten – kurz und direkt.
+              Begrüßung, Frage stellen, Antwort erhalten – direkt auf Ihrer Website.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-<!-- Kacheln -->
-<section class="section section-tiles">
-  <div class="container">
-    <h2>Schneller Überblick</h2>
-    <p class="section-intro">
-      Alles Wichtige auf einen Blick – und bei Bedarf können Sie direkt tiefer einsteigen.
-    </p>
+    <!-- Kacheln -->
+    <section class="section section-tiles">
+      <div class="container">
+        <h2>Schneller Überblick</h2>
+        <p class="section-intro">
+      
+        </p>
 
-    <div class="tile-grid tile-grid-strong">
-      <a class="tile tile-strong tile-blue" href="leistungen.html">
-        <h3>Leistungen &amp; Ablauf</h3>
-        <p>Was wir übernehmen und wie Ihr Chatbot Schritt für Schritt entsteht.</p>
-        <span class="tile-link">Mehr erfahren</span>
-      </a>
-
-      <a class="tile tile-strong tile-indigo" href="angebote.html">
-        <h3>Angebote</h3>
-        <p>Pakete für unterschiedliche Anforderungen – klar und planbar.</p>
-        <span class="tile-link">Pakete ansehen</span>
-      </a>
-
-      <a class="tile tile-strong tile-cyan" href="funktionsweise.html">
-        <h3>Funktionsweise</h3>
-        <p>Wie der Chatbot mit Website und Dokumenten arbeitet.</p>
-        <span class="tile-link">So funktioniert’s</span>
-      </a>
-
-      <a class="tile tile-strong tile-slate" href="datenschutz.html">
-        <h3>Sicherheit</h3>
-        <p>Datenschutz, begrenzte Speicherung und klarer Umgang mit Inhalten.</p>
-        <span class="tile-link">Mehr dazu</span>
-      </a>
+<div class="tile-grid tile-grid-strong">
+  <a class="tile tile-strong tile-blue" href="leistungen.html">
+    <div class="tile-icon-wrap">
+      <img src="assets/icon-leistungen.png" alt="Symbol Leistungen und Ablauf" class="tile-icon-image" />
     </div>
+    <h3>Leistungen &amp; Ablauf</h3>
+    <span class="tile-link">Mehr erfahren</span>
+  </a>
+
+  <a class="tile tile-strong tile-indigo" href="angebote.html">
+    <div class="tile-icon-wrap">
+      <img src="assets/icon-angebote.png" alt="Symbol Angebote" class="tile-icon-image" />
+    </div>
+    <h3>Angebote</h3>
+    <span class="tile-link">Mehr erfahren</span>
+  </a>
+
+  <a class="tile tile-strong tile-cyan" href="funktionsweise.html">
+    <div class="tile-icon-wrap">
+      <img src="assets/icon-funktionsweise.png" alt="Symbol Funktionsweise" class="tile-icon-image" />
+    </div>
+    <h3>Funktionsweise</h3>
+    <span class="tile-link">Mehr erfahren</span>
+  </a>
+
+<a class="tile tile-strong tile-slate" href="kontakt.html">
+  <div class="tile-icon-wrap">
+    <img src="assets/icon-kontakt.png" alt="Symbol Kontakt" class="tile-icon-image" />
   </div>
-</section>
+  <h3>Kontakt</h3>
+  <span class="tile-link">Mehr erfahren</span>
+</a>
+</div>
+      </div>
+    </section>
 
 <!-- Nutzenblock -->
 <section class="section section-soft">
   <div class="container">
     <h2>Warum ein Chatbot sinnvoll ist</h2>
     <p class="section-intro">
-      Klicken Sie auf einen Punkt, um mehr zu sehen.
+      Vier Vorteile, die auf Ihrer Website direkt spürbar werden.
     </p>
 
-    <div class="benefit-accordion">
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">24/7 erreichbar</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Ihre Website bleibt auch außerhalb der Bürozeiten ansprechbar.
-        </span>
-        <span class="benefit-item-content">
-          Interessenten und Kundinnen bzw. Kunden können auch abends, am Wochenende oder an Feiertagen Fragen stellen und sofort Antworten erhalten – ohne auf den nächsten Arbeitstag warten zu müssen.
-        </span>
-      </button>
+    <div class="benefit-grid">
+      <article class="benefit-card">
+        <img src="assets/benefit-24-7.png" alt="" class="benefit-card-bg-image" />
+        <h3>24/7 erreichbar</h3>
+      </article>
 
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Entlastet Ihr Team</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Wiederkehrende Anfragen müssen nicht jedes Mal manuell beantwortet werden.
-        </span>
-        <span class="benefit-item-content">
-          Ihr Team gewinnt Zeit für wichtigere Aufgaben, während der Chatbot einen Teil der Anfragen direkt übernimmt. Das sorgt für weniger Unterbrechungen im Alltag und schnellere Reaktionen auf Ihrer Website.
-        </span>
-      </button>
+      <article class="benefit-card">
+        <img src="assets/benefit-team.png" alt="" class="benefit-card-bg-image" />
+        <h3>Entlastet Ihr Team</h3>
+      </article>
 
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Kann auch komplexere Fragen beantworten</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-         Mit richtiger Wissensbasis beantwortet der Chatbot auch komplexere Fragen.
-        </span>
-        <span class="benefit-item-content">
-          Wenn Website, PDFs, Preisinfos, Abläufe oder weitere Unterlagen eingebunden werden, kann der Chatbot auch anspruchsvollere und spezifischere Fragen beantworten – deutlich näher an einem echten Ansprechpartner.
-        </span>
-      </button>
+      <article class="benefit-card">
+        <img src="assets/benefit-webauftritt.png" alt="" class="benefit-card-bg-image" />
+        <h3>Optimierter Webauftritt</h3>
+      </article>
 
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Nutzt bestehende Inhalte</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Ihre vorhandene Website und Dokumente werden als Wissensbasis genutzt.
-        </span>
-        <span class="benefit-item-content">
-          Sie müssen nicht alles neu schreiben. Bereits vorhandene Inhalte wie Website-Texte, Infoblätter, PDFs oder interne Informationen können als Grundlage dienen und später jederzeit erweitert werden.
-        </span>
-      </button>
+      <article class="benefit-card">
+        <img src="assets/benefit-custom.png" alt="" class="benefit-card-bg-image" />
+        <h3>Individuell anpassbar</h3>
+      </article>
     </div>
   </div>
 </section>
+
+    <!-- Was der Chatbot übernehmen kann -->
+    <section class="section">
+      <div class="container">
+        <h2>Was Ihr Chatbot übernehmen kann</h2>
+        <p class="section-intro">
+          Schnell erfassbar, direkt auf Ihrer Website einsetzbar.
+        </p>
+
+        <div class="feature-mini-grid">
+          <div class="feature-mini-card">
+            <h3>Fragen beantworten</h3>
+            <p>Zu Leistungen, Kontakt, Öffnungszeiten und typischen Abläufen.</p>
+          </div>
+
+          <div class="feature-mini-card">
+            <h3>Wissensbasis nutzen</h3>
+            <p>Website, PDFs und FAQs können als Grundlage eingebunden werden.</p>
+          </div>
+
+          <div class="feature-mini-card">
+            <h3>Team entlasten</h3>
+            <p>Wiederkehrende Anfragen können automatisch abgefangen werden.</p>
+          </div>
+
+          <div class="feature-mini-card">
+            <h3>Mitwachsen</h3>
+            <p>Je nach Paket mit mehr Modellstärke und mehr Speicherkapazität.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- CTA -->
     <section class="section section-alt home-cta-section">
@@ -210,11 +230,12 @@
         <div>
           <h2>Interesse an einem Chatbot für Ihre Website?</h2>
           <p>
-            Wir besprechen unverbindlich, was für Ihr Unternehmen sinnvoll ist und welches Paket am besten passt.
+            Wir besprechen unverbindlich, was für Ihr Unternehmen sinnvoll ist, welches Paket passt
+            und wie ein sinnvoller Start aussehen kann.
           </p>
         </div>
         <div class="cta-actions">
-          <a href="kontakt.html" class="btn btn-primary">Kontakt aufnehmen</a>
+          <a href="kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
           <a href="angebote.html" class="btn btn-secondary">Pakete ansehen</a>
         </div>
       </div>

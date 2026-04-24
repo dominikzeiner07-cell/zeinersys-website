@@ -11,32 +11,39 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="assets/logo-zeiner-systems.png"
-            alt="Zeiner Systems Logo"
-            class="logo-image"
-          />
-        </a>
-      </div>
-
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Menü öffnen"
-        aria-expanded="false"
-        aria-controls="site-drawer"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+  <!-- Header / Navigation -->
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="index.html">
+        <img
+          src="assets/logo-zeiner-systems.png"
+          alt="Zeiner Systems Logo"
+          class="logo-image"
+        />
+      </a>
     </div>
-  </header>
+
+    <nav class="header-nav" aria-label="Hauptnavigation">
+      <a href="leistungen.html">Leistungen &amp; Ablauf</a>
+      <a href="angebote.html">Angebote</a>
+      <a href="funktionsweise.html">Funktionsweise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="site-drawer"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
   <!-- Overlay -->
   <div class="drawer-backdrop" id="drawer-backdrop"></div>
@@ -74,186 +81,159 @@
   <main>
     <!-- Hero -->
     <section class="page-hero">
-      <div class="container">
-        <div class="page-hero-inner">
-          <p class="page-eyebrow">Leistungen &amp; Ablauf</p>
-          <h1>So entsteht Ihr Chatbot – Schritt für Schritt.</h1>
-          <p class="page-hero-text">
-            Sie müssen keinen Baukasten selbst konfigurieren. Wir übernehmen Einrichtung,
-            Abstimmung und Einbindung Ihres Chatbots – von der ersten Grundlage bis zur
-            laufenden Verbesserung im Alltag.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ablauf + Leistungen kombiniert -->
-    <section class="section">
-      <div class="container">
-        <h2>So läuft die Zusammenarbeit ab</h2>
-        <p class="section-intro">
-          Jeder Schritt baut auf dem vorherigen auf – damit Ihr Chatbot nicht nur gut aussieht,
-          sondern auch sinnvoll antwortet.
-        </p>
-
-<div class="service-grid steps-grid">
-  <div class="service-card step-card">
-    <div class="service-pill">Schritt 1</div>
-    <h3>Anfrage & Erstgespräch</h3>
-    <p>
-      Sie melden sich unverbindlich bei uns. Auf Wunsch zeigen wir kurz eine Demo
-      und klären, ob ein Chatbot für Ihren Betrieb sinnvoll ist.
-    </p>
-  </div>
-
-  <div class="service-card step-card">
-    <div class="service-pill">Schritt 2</div>
-    <h3>Paket & Ziel festlegen</h3>
-    <p>
-      Gemeinsam besprechen wir, was der Chatbot können soll und welches Paket
-      am besten zu Ihrem Unternehmen passt.
-    </p>
-  </div>
-
-  <div class="service-card step-card">
-    <div class="service-pill">Schritt 3</div>
-    <h3>Inhalte übernehmen</h3>
-    <p>
-      Ihre Website bildet die Grundlage. Wenn nötig, ergänzen wir weitere Inhalte
-      wie PDFs, Preisinfos oder FAQs.
-    </p>
-  </div>
-
-  <div class="service-card step-card">
-    <div class="service-pill">Schritt 4</div>
-    <h3>Einrichten & einbinden</h3>
-    <p>
-      Der Chatbot wird auf Ihren Betrieb abgestimmt und per Widget in Ihre Website eingebunden.
-    </p>
-  </div>
-
-  <div class="service-card step-card">
-    <div class="service-pill">Schritt 5</div>
-    <h3>Start & verbessern</h3>
-    <p>
-      Nach dem Start können Inhalte, Antworten und Schwerpunkte laufend weiter verbessert werden.
-    </p>
-  </div>
-</div>
-      </div>
-    </section>
-
-    <!-- Start / Erweiterung -->
-    <section class="section section-soft">
-      <div class="container">
-        <h2>Schnell startklar – später weiter ausbauen</h2>
-        <p class="section-intro">
-          Der Einstieg muss nicht kompliziert sein. In vielen Fällen reicht Ihre bestehende
-          Website für einen sinnvollen Start bereits aus.
-        </p>
-
-        <div class="two-column fast-grid">
-          <div class="info-block info-block-primary">
-            <h3>Schneller Start mit Ihrer Website</h3>
-            <p>
-              Für den ersten Chatbot genügt oft schon Ihre bestehende Website. Wichtige Inhalte
-              können direkt übernommen werden, damit der Chatbot rasch online gehen kann.
-            </p>
-            <ul class="check-list">
-              <li>Schneller Einstieg ohne großen Zusatzaufwand</li>
-              <li>Bestehende Website dient direkt als Grundlage</li>
-              <li>Der Chatbot kann in kurzer Zeit live gehen</li>
-            </ul>
-          </div>
-
-          <div class="info-block">
-            <h3>Mehr Inhalte = bessere Antworten</h3>
-            <p>
-              Je mehr passende Informationen eingebunden werden, desto präziser und hilfreicher
-              kann Ihr Chatbot antworten – auch bei spezifischeren Fragen.
-            </p>
-            <ul class="check-list">
-              <li>Preislisten und Angebotsunterlagen</li>
-              <li>PDF-Broschüren, Merkblätter, Infoblätter</li>
-              <li>Interne FAQs und Prozessinfos</li>
-              <li>Formulare, Anfahrtsinfos und weitere Dokumente</li>
-            </ul>
-            <p class="info-note">
-              Zusätzliche Inhalte können auch später ergänzt werden – Sie müssen nicht von Anfang
-              an alles perfekt vorbereiten.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-<!-- Erwartung / Schubladen -->
-<section class="section">
   <div class="container">
-    <h2>Was Sie von Zeiner Systems erwarten können</h2>
-    <p class="section-intro">
-      Klicken Sie auf einen Punkt, um mehr zu sehen.
-    </p>
+    <div class="page-hero-split">
+      <div class="page-hero-copy">
+        <p class="page-eyebrow">Leistungen &amp; Ablauf</p>
+        <h1>So läuft die Umsetzung Ihres Chatbots ab.</h1>
+      </div>
 
-    <div class="benefit-accordion">
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Persönliche Begleitung</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Sie haben während des Projekts einen direkten Ansprechpartner.
-        </span>
-        <span class="benefit-item-content">
-          Von der Einrichtung bis zu späteren Anpassungen bleiben wir ansprechbar und begleiten
-          das Projekt Schritt für Schritt. So haben Sie einen klaren Kontakt statt wechselnder Zuständigkeiten.
-        </span>
-      </button>
-
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Verständliche Abstimmung</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Wichtige Entscheidungen werden klar und nachvollziehbar besprochen.
-        </span>
-        <span class="benefit-item-content">
-          Sie müssen kein Technikprofi sein. Wir stimmen Inhalte, Verhalten und Grenzen des Chatbots
-          so mit Ihnen ab, dass die Umsetzung verständlich und praktikabel bleibt.
-        </span>
-      </button>
-
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Sinnvolle Umsetzung</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Der Chatbot soll im Alltag wirklich nützlich sein – nicht nur gut aussehen.
-        </span>
-        <span class="benefit-item-content">
-          Ziel ist eine Lösung, die zu Ihrem Unternehmen passt, typische Anfragen sinnvoll abfängt
-          und mit den richtigen Inhalten auch detailliertere Fragen beantworten kann.
-        </span>
-      </button>
-
-      <button class="benefit-item" type="button">
-        <span class="benefit-item-head">
-          <span class="benefit-item-title">Weiterentwicklung nach dem Start</span>
-          <span class="benefit-item-toggle">Mehr anzeigen</span>
-        </span>
-        <span class="benefit-item-preview">
-          Der Chatbot kann nach dem Go-live laufend angepasst und verbessert werden.
-        </span>
-        <span class="benefit-item-content">
-          Nach dem Start können Inhalte ergänzt, Antworten verfeinert und Schwerpunkte angepasst werden.
-          So bleibt der Chatbot nicht auf dem ersten Stand stehen, sondern entwickelt sich mit Ihrem Bedarf weiter.
-        </span>
-      </button>
+      <div class="page-hero-side">
+        <p class="page-hero-side-text">
+          Von der ersten Abstimmung über die Einrichtung bis zum Livegang begleiten wir
+          den Aufbau Schritt für Schritt. Klar strukturiert, verständlich und so, dass
+          Ihr Chatbot sinnvoll zu Ihrem Unternehmen passt.
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
+    <!-- Ablauf -->
+    <section class="section">
+      <div class="container">
+        <h2></h2>
+        <p class="section-intro">
+        
+        </p>
+
+        <div class="process-timeline process-timeline-zigzag">
+          <svg class="process-zigzag-line" viewBox="0 0 1000 920" preserveAspectRatio="none" aria-hidden="true">
+<path d="M110 95
+         H740
+         Q790 95 790 145
+         V250
+         Q790 300 740 300
+         H240
+         Q190 300 190 350
+         V500
+         Q190 550 240 550
+         H740
+         Q790 550 790 600
+         V800
+         Q790 850 740 850" />
+          </svg>
+
+         <article class="process-step process-step-left">
+  <div class="process-step-card">
+    <img src="assets/schritt-1.png" alt="" class="process-step-graphic" />
+    <div class="process-step-number">01</div>
+    <h3>Planung &amp; Abstimmung</h3>
+    <ul class="process-step-list">
+      <li>kurzes Erstgespräch</li>
+      <li>passendes Paket festlegen</li>
+      <li>Ziele und Einsatz klären</li>
+    </ul>
+  </div>
+</article>
+
+ <article class="process-step process-step-right">
+  <div class="process-step-card">
+    <img src="assets/schritt-2.png" alt="" class="process-step-graphic" />
+    <div class="process-step-number">02</div>
+    <h3>Inhalte &amp; Einrichtung</h3>
+    <ul class="process-step-list">
+      <li>Website als Grundlage nutzen</li>
+      <li>PDFs oder FAQs ergänzen</li>
+      <li>Verhalten des Chatbots abstimmen</li>
+    </ul>
+  </div>
+</article>
+
+ <article class="process-step process-step-left">
+  <div class="process-step-card">
+    <img src="assets/schritt-3.png" alt="" class="process-step-graphic" />
+    <div class="process-step-number">03</div>
+    <h3>Einbindung &amp; Livegang</h3>
+    <ul class="process-step-list">
+      <li>Widget in Website einbinden</li>
+      <li>optisch passend abstimmen</li>
+      <li>gemeinsam live schalten</li>
+    </ul>
+  </div>
+</article>
+
+<article class="process-step process-step-right">
+  <div class="process-step-card">
+    <img src="assets/schritt-4.png" alt="" class="process-step-graphic" />
+    <div class="process-step-number">04</div>
+    <h3>Optimierung &amp; Ausbau</h3>
+    <ul class="process-step-list">
+      <li>Antworten weiter verbessern</li>
+      <li>Inhalte später ergänzen</li>
+      <li>bei Bedarf weiter ausbauen</li>
+    </ul>
+  </div>
+</article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vorbereitung / Inhalte -->
+    <section class="section section-soft">
+      <div class="container">
+        <h2>Was wir für den Start von Ihnen brauchen</h2>
+        <p class="section-intro">
+        
+        </p>
+
+        <div class="setup-grid">
+          <article class="setup-card">
+            <div class="setup-card-image-wrap">
+              <img src="assets/Bestehende-Website.png" alt="" class="setup-card-image" />
+            </div>
+            <div class="setup-card-content">
+              <div class="setup-card-number">01</div>
+              <h3>Bestehende Website</h3>
+              <p>
+                In vielen Fällen reicht Ihre bestehende Website bereits als Grundlage, damit
+                der Chatbot mit den wichtigsten Inhalten starten kann.
+              </p>
+            </div>
+          </article>
+
+          <article class="setup-card">
+            <div class="setup-card-image-wrap">
+              <img src="assets/Kurze-Abstimmung.png" alt="" class="setup-card-image" />
+            </div>
+            <div class="setup-card-content">
+              <div class="setup-card-number">02</div>
+              <h3>Kurze Absprache</h3>
+              <p>
+                Gemeinsam klären wir kurz, welche Fragen der Chatbot beantworten soll, wie er
+                auftreten soll und was für Ihr Unternehmen wirklich sinnvoll ist.
+              </p>
+            </div>
+          </article>
+
+          <article class="setup-card">
+            <div class="setup-card-image-wrap">
+              <img src="assets/Optionale-Zusatzhilfe.png" alt="" class="setup-card-image" />
+            </div>
+            <div class="setup-card-content">
+              <div class="setup-card-number">03</div>
+              <h3>Optionale Zusatzinhalte</h3>
+              <p>
+                Falls vorhanden, können später auch PDFs, FAQs, Preislisten oder weitere
+                Unterlagen ergänzt werden, um Antworten noch präziser zu machen.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
 
     <!-- CTA -->
     <section class="section section-alt">
