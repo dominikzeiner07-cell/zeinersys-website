@@ -434,7 +434,17 @@ body.drawer-open {
 }
 
 .page-hero-side {
-  padding-top: 3.2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.page-hero-side-angebote {
+  padding-top: 0rem;
+}
+
+.page-hero-side-leistungen {
+  padding-top: 2.5rem;
 }
 
 .page-hero-side-text {
@@ -443,6 +453,38 @@ body.drawer-open {
   font-size: 1.3rem;
   line-height: 1.5;
   color: #64748b;
+}
+
+.page-hero-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  max-width: 320px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.page-hero-highlight-item {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0.95rem 1rem;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid #dbeafe;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(2px);
+}
+
+.page-hero-highlight-item::before {
+  content: "✓";
+  margin-right: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2563eb;
 }
 
 /* Buttons */
@@ -1418,6 +1460,12 @@ body.drawer-open {
     font-size: 1rem;
     line-height: 1.65;
   }
+
+ .page-hero-highlight {
+  max-width: 100%;
+  margin-left: 0;
+  width: 100%;
+}
 
   .process-zigzag-line {
     display: none;
