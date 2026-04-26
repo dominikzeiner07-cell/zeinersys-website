@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Funktionsweise – Zeiner Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="So funktioniert der KI-Chatbot von Zeiner Systems – von der Frage im Chat über die Suche in der Wissensbasis bis zur Antwort durch ein GPT-Modell."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="assets/logo-zeiner-systems.png"
+            alt="Zeiner Systems Logo"
+            class="logo-image"
+          />
+        </a>
+      </div>
+
+      <nav class="header-nav" aria-label="Hauptnavigation">
+        <a href="leistungen.html">Leistungen &amp; Ablauf</a>
+        <a href="angebote.html">Angebote</a>
+        <a href="funktionsweise.html">Funktionsweise</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="site-drawer"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay -->
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+  <!-- Drawer -->
+  <aside class="site-drawer" id="site-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <p class="drawer-title">Menü</p>
+      <button class="drawer-close" type="button" aria-label="Menü schließen">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav">
+      <a href="index.html">Home</a>
+      <a href="leistungen.html">Leistungen &amp; Ablauf</a>
+      <a href="angebote.html">Angebote</a>
+      <a href="funktionsweise.html">Funktionsweise</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+
+    <div class="drawer-divider"></div>
+
+    <nav class="drawer-nav drawer-nav-secondary">
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+    </nav>
+
+    <div class="drawer-cta">
+      <a href="kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-split">
+          <div class="page-hero-copy">
+            <p class="page-eyebrow">Funktionsweise</p>
+            <h1>So beantwortet der Chatbot Fragen.</h1>
+          </div>
+
+          <div class="page-hero-side page-hero-side-funktionsweise">
+            <p class="page-hero-side-text">
+              Der Chatbot nutzt Ihre hinterlegten Inhalte, sucht passende Informationen heraus
+              und erstellt daraus eine verständliche Antwort direkt im Chatfenster.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section class="section">
+      <div class="container">
+        <h2>Vom Chat zur Antwort</h2>
+        <p class="section-intro">
+          
+        </p>
+
+        <div class="function-roadmap">
+          <div class="function-roadmap-line" aria-hidden="true"></div>
+
+          <article class="function-step function-step-left">
+            <div class="function-step-card">
+              <div class="function-step-image-wrap">
+                <img src="assets/funktionsweise-frage.png" alt="" class="function-step-image" />
+              </div>
+              <div class="function-step-content">
+                <div class="function-step-number">01</div>
+                <h3>Besucher stellt eine Frage</h3>
+                <p>
+                  Der Besucher schreibt seine Frage direkt in das Chat-Widget auf Ihrer Website.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="function-step function-step-right">
+            <div class="function-step-card">
+              <div class="function-step-image-wrap">
+                <img src="assets/funktionsweise-system.png" alt="" class="function-step-image" />
+              </div>
+              <div class="function-step-content">
+                <div class="function-step-number">02</div>
+                <h3>Das System verarbeitet die Anfrage</h3>
+                <p>
+                  Die Frage wird technisch erfasst und für die Suche nach passenden Informationen vorbereitet.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="function-step function-step-left">
+            <div class="function-step-card">
+              <div class="function-step-image-wrap">
+                <img src="assets/funktionsweise-datenbank.png" alt="" class="function-step-image" />
+              </div>
+              <div class="function-step-content">
+                <div class="function-step-number">03</div>
+                <h3>Relevante Inhalte werden gesucht</h3>
+                <p>
+                  In der Wissensbasis werden passende Informationen aus Website-Inhalten, FAQs oder Dokumenten gefunden.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="function-step function-step-right">
+            <div class="function-step-card">
+              <div class="function-step-image-wrap">
+                <img src="assets/funktionsweise-gpt.png" alt="" class="function-step-image" />
+              </div>
+              <div class="function-step-content">
+                <div class="function-step-number">04</div>
+                <h3>Ein GPT-Modell erstellt die Antwort</h3>
+                <p>
+                  Die gefundenen Informationen werden zusammen mit der Frage und dem Prompt genutzt, um eine verständliche Antwort zu formulieren.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="function-step function-step-left">
+            <div class="function-step-card">
+              <div class="function-step-image-wrap">
+                <img src="assets/funktionsweise-antwort.png" alt="" class="function-step-image" />
+              </div>
+              <div class="function-step-content">
+                <div class="function-step-number">05</div>
+                <h3>Die Antwort erscheint im Chat</h3>
+                <p>
+                  Der Besucher erhält die Antwort direkt im Widget und kann bei Bedarf weitere Fragen stellen.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technik kurz erklärt -->
+    <section class="section section-soft">
+      <div class="container">
+        <h2>Technik im Hintergrund, einfach nutzbar im Alltag</h2>
+        <p class="section-intro">
+          Der Chatbot wirkt für Besucher einfach, nutzt im Hintergrund aber eine strukturierte Verbindung
+          aus Wissensbasis, Suche und KI-Modell.
+        </p>
+
+        <div class="feature-mini-grid">
+          <div class="feature-mini-card">
+            <h3>Wissensbasis</h3>
+            <p>
+              Inhalte Ihrer Website, PDFs oder FAQs können als Grundlage eingebunden werden.
+            </p>
+          </div>
+
+          <div class="feature-mini-card">
+            <h3>Datenbank &amp; Suche</h3>
+            <p>
+              Relevante Informationen werden aus den hinterlegten Inhalten herausgesucht.
+            </p>
+          </div>
+
+          <div class="feature-mini-card">
+            <h3>GPT-Modell</h3>
+            <p>
+              Das KI-Modell formuliert aus Frage und passenden Informationen eine verständliche Antwort.
+            </p>
+          </div>
+
+          <div class="feature-mini-card">
+            <h3>Antwort im Widget</h3>
+            <p>
+              Die Antwort erscheint direkt im Chatfenster auf Ihrer Website.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt">
+      <div class="container cta-row">
+        <div>
+          <h2>Möchten Sie sehen, ob das zu Ihrer Website passt?</h2>
+          <p>
+            In einem kurzen Gespräch können wir klären, welche Inhalte vorhanden sind und wie ein
+            Chatbot für Ihre Website sinnvoll aufgebaut werden kann.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <a href="kontakt.html" class="btn btn-primary">Gespräch anfragen</a>
+          <a href="angebote.html" class="btn btn-secondary">Pakete ansehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>© <span id="year"></span> Zeiner Systems – KI-Chatbots für Unternehmen</p>
+      </div>
+      <div class="footer-right">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

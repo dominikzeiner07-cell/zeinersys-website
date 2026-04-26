@@ -1417,6 +1417,109 @@ body.drawer-open {
   color: #ffffff;
 }
 
+/* Funktionsweise Roadmap */
+.function-roadmap {
+  position: relative;
+  max-width: 1180px;
+  margin: 3rem auto 0;
+  padding: 0.4rem 0;
+}
+
+.function-roadmap-line {
+  position: absolute;
+  top: 3rem;
+  bottom: 3rem;
+  left: 50%;
+  width: 12px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #bfdbfe 0%, #93c5fd 45%, #bfdbfe 100%);
+  box-shadow: 0 0 18px rgba(147, 197, 253, 0.3);
+  z-index: 0;
+}
+
+.function-step {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  margin-bottom: 2.4rem;
+}
+
+.function-step:last-child {
+  margin-bottom: 0;
+}
+
+.function-step-left,
+.function-step-right {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.function-step-card {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 420px minmax(0, 1fr);
+  gap: 2.4rem;
+  align-items: center;
+  padding: 2.25rem 2.4rem;
+  border-radius: 1.55rem;
+  border: 1px solid #dbeafe;
+  background: #ffffff;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.18s ease-out,
+    box-shadow 0.18s ease-out,
+    border-color 0.18s ease-out;
+}
+
+.function-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px rgba(15, 23, 42, 0.09);
+  border-color: #93c5fd;
+}
+
+.function-step-image-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 330px;
+  background: #ffffff;
+}
+
+.function-step-image {
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.function-step-number {
+  margin-bottom: 0.45rem;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #2563eb;
+}
+
+.function-step-card h3 {
+  margin: 0 0 0.7rem;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  color: #020617;
+}
+
+.function-step-card p {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .logo-image {
@@ -1514,6 +1617,26 @@ body.drawer-open {
     grid-template-columns: 1fr;
   }
 
+.function-roadmap-line {
+  left: 50%;
+  width: 6px;
+  top: 2rem;
+  bottom: 2rem;
+}
+
+.function-step,
+.function-step-left,
+.function-step-right {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+  .function-step-card {
+    max-width: 100%;
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
 .steps-grid {
   grid-template-columns: 1fr;
   max-width: 100%;
@@ -1603,6 +1726,36 @@ body.drawer-open {
 
 .tile-strong {
   min-height: 260px;
+}
+
+.function-step-card {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.35rem 1.2rem 1.45rem;
+}
+
+.function-step-image-wrap {
+  min-height: 190px;
+}
+
+.function-step-image {
+  max-width: 230px;
+}
+
+.function-step-card h3 {
+  font-size: 1.22rem;
+}
+
+.function-step-card p {
+  font-size: 0.96rem;
+}
+
+.function-step-card h3 {
+  font-size: 1.12rem;
+}
+
+.function-step-card p {
+  font-size: 0.93rem;
 }
 
 .tile-link {
